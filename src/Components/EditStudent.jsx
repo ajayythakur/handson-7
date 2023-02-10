@@ -5,12 +5,12 @@ import { useSelector } from 'react-redux';
 import { stdEdit } from '../Features/studentSlice';
 
 const EditStudent = () => {
-    const location2=useLocation();
+    const location2 = useLocation();
     const location = (location2.state.data);
     const navigate = useNavigate();
     const dispatch = useDispatch();
-    const studentArr=useSelector((state)=>state.student)
-    
+    const studentArr = useSelector((state) => state.student)
+
 
     var tmpObj = { name: studentArr[location].name, age: studentArr[location].age, course: studentArr[location].course, batch: studentArr[location].batch };
 
@@ -20,13 +20,8 @@ const EditStudent = () => {
     }
 
     const submitHandler = () => {
-
-        // context((obj) => {
-            // obj[location] = tmpObj;
-            dispatch(stdEdit({tmpObj,location}));
-            alert(`Student ${(tmpObj).name}'s details is updated !`);
-            // return obj;
-        // })
+        dispatch(stdEdit({ tmpObj, location }));
+        alert(`Student ${(tmpObj).name}'s details is updated !`);
         navigate('/Students')
     }
 

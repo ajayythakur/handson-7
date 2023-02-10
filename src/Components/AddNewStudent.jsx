@@ -17,7 +17,7 @@ const AddNewStudent = () => {
     // };
 
     const navigate = useNavigate();
-    const dispatch=useDispatch();
+    const dispatch = useDispatch();
     var tmpObj = {
         name: "",
         age: "",
@@ -30,21 +30,11 @@ const AddNewStudent = () => {
     }
 
     const submitHandler = (e) => {
-        // e.preventdefault();
-        // array((obj) => {
-            // obj.push(tmpObj);
-            // console.log(tmpObj)
-            dispatch(stdAdd(tmpObj))
-            alert(`New Student ${(tmpObj).name} is Added`);
-
-            // return obj;
-
-
-        // });
+        dispatch(stdAdd(tmpObj))
+        alert(`New Student ${(tmpObj).name} is Added`);
         navigate('/Students');
         console.log("Student Added")
     }
-    // console.log(submitHandler);
 
     const cancelEvent = () => {
         navigate('/Students');
@@ -70,7 +60,7 @@ const AddNewStudent = () => {
 
                 </form>
             </div>
-                    
+
         </div>
     );
 };
