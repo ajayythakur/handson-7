@@ -6,18 +6,9 @@ import Home from "./Components/Home";
 import Students from "./Components/Students";
 import ContactUs from "./Components/ContactUs";
 import AddNewStudent from "./Components/AddNewStudent";
-// import { useContext } from "react";
-import { useState } from "react";
 import EditStudent from "./Components/EditStudent"
 
 function App() {
-//   const [state, setState] = useState([{
-//     name: 'Ajay',
-//     age: '22',
-//     course: 'Full Stack',
-//     batch: 'EA18',
-// }])
-  // )
   return (
     <div>
       <NavBar />
